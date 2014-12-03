@@ -5,11 +5,75 @@
              and building a list of the categories sub-categories.                          
         -->
     </div>
+    
     <blc:categories resultVar="navCategories" parentCategory="Primary Nav" maxResults="6" />
     
-    <ul>
-        <li th:each="category : ${navCategories}" th:unless="${#strings.isEmpty(category.url)}">
-            <a class="home" th:href="@{${category.url}}" th:class="${categoryStat.first}? 'home'" th:text="${category.name}"></a>
-        </li>
-    </ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    
+      <!-- TOP Header  -->
+      <div class="navbar-top">
+      	<div class="container">
+      		<div class="row pull-right">
+		     	<div th:if="${customer.anonymous}"  th:remove="tag">
+		
+		            <a th:href="@{/login}">
+		                <span th:text="#{home.login}">Login</span>
+		            </a>
+		            &nbsp;|&nbsp; 
+		            <a th:href="@{/register}">
+		                <span th:text="#{home.register}">Register</span>
+		            </a>
+		            &nbsp;|&nbsp; 
+		        </div>
+		        <div th:unless="${customer.anonymous}" th:remove="tag">
+		            <span><span th:text="#{home.welcome}">Welcome</span>, <a th:href="@{/account}" th:text="${customer.firstName}"></a></span>
+		            &nbsp;|&nbsp; 
+		            <a th:href="@{/logout}">
+		                <span th:text="#{home.logout}">Logout</span>
+		            </a>
+		            &nbsp;|&nbsp; 
+		        </div>
+		
+		
+		        <img blc:src="@{/img/shopping_cart.png}" alt="Shopping Cart Icon" />&nbsp; 
+		        <a id="cartLink" th:href="@{/cart}">
+		            <span id="headerCartItemWordSingular_i18n" style="display: none;" th:text="#{home.item}" />
+		            <span id="headerCartItemWordPlural_i18n" style="display: none;" th:text="#{home.items}" />
+		            <span class="headerCartItemsCount" th:text="${cart.itemCount}" />
+		            <span class="headerCartItemsCountWord" th:text="${cart.itemCount == 1} ? #{home.item} :  #{home.items}" />
+		        </a>
+		    </div>    
+	     </div>
+      </div>
+      
+      <!-- Responsible Menu -->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">eCommerce</a>
+        </div>
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          <!-- Categories -->
+          <ul class="nav navbar-nav navbar-right">
+            <!-- search product -->
+	        <blc:form class="navbar-form navbar-right" style="margin-left:5px; margin-right:5px" th:action="@{/search}" method="GET">
+	            <input type="search" class="form-control" placeholder="Search..." name="q" th:value="${originalQuery}" />
+	            <input type="submit" class="btn btn-default" value="go" />
+		    </blc:form>
+		    
+            <li th:each="category : ${navCategories}" th:unless="${#strings.isEmpty(category.url)}">
+            	<a class="home" th:href="@{${category.url}}" th:class="${categoryStat.first}? 'home'" th:text="${category.name}"></a>
+        	</li>
+          </ul>
+        </div>
+      </div>
+      
+    </nav>
+    
 </nav>

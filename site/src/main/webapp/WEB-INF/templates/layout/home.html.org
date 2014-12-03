@@ -8,9 +8,9 @@
 
 <body>
     <div id="notification_bar"></div>
-    <!-- <header th:substituteby="layout/partials/header" /> -->
+    <header th:substituteby="layout/partials/header" />
     
-    <!-- <div id="content" class="width_setter group" role="main">
+    <div id="content" class="width_setter group" role="main">
     
         <nav th:substituteby="layout/partials/nav" />
             
@@ -32,9 +32,7 @@
         <ul id="products" class="group">
             <li th:each="product : ${products}" th:object="${product}" th:include="catalog/partials/productListItem" class="product_container"></li>
         </ul>
-    </div> -->
-    
-    <nav th:substituteby="layout/partials/nav" />
+    </div>
     
     <footer th:substituteby="layout/partials/footer" />
     
