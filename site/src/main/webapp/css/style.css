@@ -80,6 +80,16 @@ body {
   border-color: #C50B31;
 }
 
+.btn-primary:hover, .btn-primary:focus {
+	background-color: #940028;
+	background-position: 0 -15px;
+}
+
+.btn-primary:active, .btn-primary.active {
+	background-color: #940028;
+	border-color: #245580;
+}
+
 /* responsable width */
 @media (min-width: 968px) {
   .container {
