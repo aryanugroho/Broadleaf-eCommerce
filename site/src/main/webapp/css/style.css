@@ -1,3 +1,12 @@
+
+/************************************/
+/* Angular CSS                      */
+/************************************/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
 /************************************/
 /* LGE Font Family                  */
 /************************************/
@@ -48,12 +57,20 @@ body {
 }
 
 .navbar .container-fluid {
-	background-color:#525252;
+	background-color:#23282E;
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
 	color: #FEFEFE;
 }
+
+.dropdown-menu {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 50px;
+}
+
 
 /* 
 ////////////////////////////////////////////////////////////////////////////////
