@@ -72,6 +72,16 @@ body {
 }
 
 
+/************************************/
+/* Main Customizing                 */
+/************************************/
+.featured-title {
+	text-align:center; 
+	margin-bottom:20px; 
+	font-size: 20px;
+}
+
+
 /* 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -126,10 +136,11 @@ body {
   }
 }
 
-/************************************/
-/* home.html - product list  */
-/************************************/
+/***************************************/
+/* main/partials/featured-product.html */
+/***************************************/
 .thumbnail {
+	max-width: 320px;
 	display: block;
 	padding: 5px;
 	margin-bottom: 10px;
@@ -161,9 +172,11 @@ body {
 	padding: 3px;
 	font: 13px/18px 'BryantLGLight';
 	color: #655c5a;
-	overflow: hidden;
 	height: 72px;
 	max-height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;     /** IE6+, Firefox 7+, Opera 11+, Chrome, Safari **/
+    -o-text-overflow: ellipsis;  /** Opera 9 & 10 **/
 }
 
 .thumbnail .new_badge {
