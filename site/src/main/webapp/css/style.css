@@ -42,6 +42,10 @@ body {
 /************************************/
 /* Header Customizing               */
 /************************************/
+.navbar {
+	margin-bottom: 0px;	
+}
+
 .navbar .navbar-top {
 	height: 30px;
 	padding-top: 5px;
@@ -62,6 +66,22 @@ body {
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
 	color: #FEFEFE;
+}
+
+.navbar-fixed-top {
+	position: absolute;
+	top: 25px;
+	left: 0;
+	right: 0;
+}
+
+.menu-header {
+	position: absolute;
+	top: 0px;
+	height: 25px;
+    width: 100%;
+    color: #342020;
+    font-weight: 600;
 }
 
 .dropdown-menu {
@@ -218,11 +238,6 @@ html, body {
   height: 100%;
 }
 
-body {
-  padding-top: 50px;
- /* body padding for fixed top nav */
-}
-
 .img-home-portfolio,
 .img-customer,
 .portfolio-item {
@@ -340,7 +355,7 @@ body {
 /* Responsive Styles */
 @media (max-width: 767px) {
   .carousel {
-    height: 40%;
+    height: 100%;
     /* increases the carousel height so it looks good on phones */
   }
 }

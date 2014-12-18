@@ -5,14 +5,14 @@ $(function(){
         maxWidth    : 940,
         minHeight   : 355,
         maxHeight   : 570,
-        position    : ['30px']
+        position    : ['130px']
     };
     
     var modalProductOptionsOptions = {
         minWidth    : 190,
         maxWidth    : 190,
         minHeight   : 300,
-        position    : ['30px']
+        position    : ['130px']
     };
     
     // This will change the header "X item(s)" text to the new count and pluralization of "item"

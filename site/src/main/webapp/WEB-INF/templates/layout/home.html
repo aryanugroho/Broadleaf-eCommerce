@@ -6,27 +6,30 @@
 
 <head th:include="/layout/partials/head (pageTitle='Broadleaf And Twitter Bootstrap')"></head>
 
-<body ng-app="Mobicon.BroadleafCommerce">
+<body>
     <div id="notification_bar"></div>
     
-    <!-- header menu -->
-    <div th:include="layout/partials/nav" />
+  	<header th:substituteby="/layout/partials/header" />
+
     
+	<!-- start : main page -->
+    <div role="main">
     
-           
-    <!-- start : main page -->
-    <div th:include="main/partials/banner-carousel" />
-    
-    <div class="section">
-        <div th:include="main/partials/featured-products" />
+	    <!-- header menu -->
+	    <div th:substituteby="layout/partials/nav" />
+	           
+	    <div th:include="main/partials/banner-carousel" />
+	    
+	    <div class="section">
+	        <div th:include="main/partials/featured-products" />
+	    </div>
+	    
+	    <div class="section-colored text-center">
+	        <div th:include="main/partials/promo-snippet" />
+	    </div>
+	    
     </div>
-    
-    <div class="section-colored text-center">
-        <div th:include="main/partials/promo-snippet" />
-    </div>
-    <!-- end : main page -->
-    
-   
+	<!-- end : main page -->
    
     <!-- footer copyright -->
     <footer th:substituteby="layout/partials/footer" />

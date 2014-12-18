@@ -1,5 +1,6 @@
+<div class="menu-header">
 
-	  <div class="container pull-right" style="margin-right:10px;">
+	<div class="container pull-right" style="margin-right:5px;padding-top:2px;">
 	
 	   	<div class="pull-right">
 	    
@@ -24,7 +25,7 @@
 	       </div>
 	
 	       <img blc:src="@{/img/icon-cart.jpg}" alt="Shopping Cart Icon" />&nbsp; 
-	       <a id="cartLink" th:href="@{/cart}">
+	       <a id="cartLink" class="modalcart" th:href="@{/cart}">
 	           <span id="headerCartItemWordSingular_i18n" style="display: none;" th:text="#{home.item}" />
 	           <span id="headerCartItemWordPlural_i18n" style="display: none;" th:text="#{home.items}" />
 	           <span class="headerCartItemsCount" th:text="${cart.itemCount}" />
@@ -34,3 +35,5 @@
 	   </div>   
 	   
 	</div> 
+	
+</div>

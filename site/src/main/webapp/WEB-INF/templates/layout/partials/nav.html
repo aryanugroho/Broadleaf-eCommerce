@@ -8,16 +8,16 @@
 
 <blc:categories resultVar="navCategories" parentCategory="Primary Nav" maxResults="6" />
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
   <!-- cart login/register in TOP Header  -->
-  <div class="navbar-top" th:include="/layout/partials/header"></div>
+  <!-- <div class="navbar-top" th:include="/layout/partials/header"></div> -->
   
   <!-- category 2level menu in Responsible Menu -->
   <!-- <div ng-if="isSmartDevice" class="container-fluid ng-cloak" th:include="/layout/partials/menu-mobile"></div>
   <div ng-if="!isSmartDevice" class="container-fluid ng-cloak" th:include="/layout/partials/menu-desktop"></div> -->
   
-  <div class="container-fluid" th:include="/layout/partials/menu-desktop"></div>
+  <div class="container-fluid" th:include="/layout/partials/menu"></div>
   
-</nav>
+</div>
     
