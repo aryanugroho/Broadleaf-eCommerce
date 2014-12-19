@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `lgeos` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `lgeos`;
+CREATE DATABASE  IF NOT EXISTS `broadleaf` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `broadleaf`;
 -- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
 --
 -- Host: localhost    Database: lgeos

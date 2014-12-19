@@ -3,7 +3,7 @@
 	<div class="container pull-right" style="margin-right:5px;padding-top:2px;">
 	
 	   	<div class="pull-right">
-	    
+        
 	    	<div th:if="${customer.anonymous}"  th:remove="tag">
 	           <a th:href="@{/login}">
 	               <span th:text="#{home.login}">Login</span>
@@ -32,7 +32,32 @@
 	           <span class="headerCartItemsCountWord" th:text="${cart.itemCount == 1} ? #{home.item} :  #{home.items}" />
 	       </a>
 	    
-	   </div>   
+	   </div>  
+	   
+	   <div class="pull-right" style="margin-right:15px;">
+	    	<div id="languages">
+	            <span id="selectedLocale" th:text="${session.blLocale.localeCode}" style="display: none" />
+	
+	            <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'en_US')">
+	                <img id="en_US" src="img/flags/United-States.png" blc:src="@{/img/flags/United-States.png}" alt="United States" title="English" />
+	            </a>
+	
+	            <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'en_GB')">
+	                <img id="en_GB" src="img/flags/United-Kingdom.png" blc:src="@{/img/flags/United-Kingdom.png}" alt="United Kingdom" title="English (UK)"/>
+	            </a>
+	
+	            <a  href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'es_MX')">
+	                <img id="es_MX" src="img/flags/Mexico.png" blc:src="@{/img/flags/Mexico.png}" alt="Mexico" title="Spanish (Mexico)"/>
+	            </a>
+	
+	            <!-- <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'es_ES')">
+	                <img id="es_ES" src="img/flags/Mexico.png" blc:src="@{/img/flags/Spain.png}" alt="Spain" title="Spanish (Spain)"/>
+	            </a> -->
+	           <!--  <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'fr_FR')">
+	                <img id="fr_FR" src="img/flags/Mexico.png" blc:src="@{/img/flags/France.png}" alt="France" title="French (France)" />
+	            </a> -->
+	        </div>
+	   </div>
 	   
 	</div> 
 	
